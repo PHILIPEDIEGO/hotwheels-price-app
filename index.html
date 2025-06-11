@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesquisa de Preço Hot Wheels</title>
+</head>
+<body>
+    <h1>Pesquisa de Preço - Hot Wheels</h1>
+    <form method="POST">
+        <input type="text" name="modelo" placeholder="Digite o nome (ex: twin mill)">
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <p><strong>Modelo:</strong> {{ resultado.nome }}</p>
+        <p><strong>Preço (USD):</strong> {{ resultado.preco_usd }}</p>
+        <p><strong>Preço (R$):</strong> {{ resultado.preco_brl }}</p>
+        <p><a href="{{ resultado.url }}" target="_blank">Ver no site</a></p>
+    {% endif %}
+</body>
+</html>
