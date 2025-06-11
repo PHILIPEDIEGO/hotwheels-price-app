@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from scraper import buscar_preco
 from exchange import converter_usd_para_brl
